@@ -4,6 +4,13 @@
 	color: #333;
 }
 
+.simple-modal a
+{
+	font-size: 13px;
+	color: #2857b6;
+	text-decoration: none;
+}
+
 .simple-modal .btn-primary
 {
 	background-color: #2857b6;
@@ -59,4 +66,10 @@ input[type="text"], input[type="password"], input[type=email], select
 	font-size: 20px;
 	font-weight: bolder;
 	font-family: arial, sans-serif, helvetica;
+}
+
+.simple-modal .heading-hr
+{
+	padding:0;
+	margin-top:-15px;
 }

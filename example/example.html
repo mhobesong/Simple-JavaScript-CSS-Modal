@@ -9,26 +9,74 @@
 
 	<body>
 
-		<div class="simple-modal" id="simple-modal-example">
+		<div class="simple-modal" id="signin-modal">
 			<div class="simple-modal-container">
 				<div class="simple-modal-close" title="Close">x</div>
 				<div class="simple-modal-title">
-					<h3>Signup</h3>
+					<h3>Sign in with</h3>
 				</div>
 				<div class="simple-modal-content">
 					<button class="btn-primary facebook-auth-button"><span class="social-abr">f</span>acebook</button>
 					<button class="btn-danger google-auth-button"><span class="social-abr">G</span>oogle</button>
 					<hr>
-					<label>Full name<input type="text" required></label>
-					<label>Email<input type="email" required></label>
-					<br>
-					<label>Password<input type="password" required></label>
-					<label>Retype Password<input type="password" required></label>
+					<center><h4>-- OR --</h4></center>
+
+					<form method="POST">
+						<label>Full name<input type="text" name="name" required></label>
+						<label>Email<input type="email" name="email" required></label>
+						<br>
+						<label>Password<input name="password" type="password" required></label>
+						<br>
+						<button class="btn-primary" type="submit">Sign in</button>
+						<hr>
+						<a href="javascript:(function(){(new SimpleModal(document.querySelector('#signin-modal')).hide())})()" class="simple-modal-trigger" simple-modal-target="signup-modal">Sign up</a>
+					</form>
 				</div>
 			</div>
 		</div>
 
-		<button class="simple-modal-trigger" simple-modal-target="simple-modal-example">Show modal</button>
+		<div class="simple-modal" id="signup-modal">
+			<div class="simple-modal-container">
+				<div class="simple-modal-close" title="Close">x</div>
+				<div class="simple-modal-title">
+					<h3>Sign up with</h3>
+				</div>
+				<div class="simple-modal-content">
+					<button class="btn-primary facebook-auth-button"><span class="social-abr">f</span>acebook</button>
+					<button class="btn-danger google-auth-button"><span class="social-abr">G</span>oogle</button>
+					<hr>
+					<center><h4>-- OR --</h4></center>
+
+					<form method="POST">
+						<label>Full name<input type="text" name="name" required></label>
+						<label>Email<input type="email" name="email" required></label>
+						<br>
+						<label>Password<input name="password" type="password" required></label>
+						<label>Retype Password<input name="repassword" type="password" required></label>
+
+						<h3>Contact information</h3>
+						<hr class="heading-hr">
+
+						<label>Telephone<input name="telephone" type="text" required></label>
+						<label>First Address<input name="address1" type="text" required></label>
+						<label>Seconde Address<input name="address2" type="text"></label>
+
+						<h3>Location information</h3>
+						<hr class="heading-hr">
+
+						<label>city<input name="city" type="text" required></label>
+						<label>State<input name="state" type="text" required></label>
+						<label>Country<select name="country" required>
+							<option value="">--Select country--</option>
+						</select></label>
+						<hr>
+						<button class="btn-primary" type="submit">Sign up</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<button class="simple-modal-trigger" simple-modal-target="signin-modal">Show modal</button>
 	</body>
 	<script src="../simple-modal.js" lang=></script>
 </html>
