@@ -42,7 +42,7 @@ Simple modal implementation. If you need some thing simple and light. You just w
     <button class="simple-modal-trigger" simple-modal-target="signin-modal">Show modal</button>
     <!-- /modal trigger -->
   
-    <script src="../simple-modal.js" lang=></script>
+    <script src="simple-modal.js" lang=></script>
 
   </body>
 </html>
