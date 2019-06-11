@@ -1,0 +1,72 @@
+/**
+* Js API definition
+* @author: Moses Besong Besong
+* @email: mosbesong@gmail.com
+* @link: 
+*/
+.simple-modal
+{
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 999999999px;
+	background-color: rgb(0, 0, 0, .5);
+	z-index: 9999;
+	text-align: center;
+}
+
+.simple-modal.active
+{
+	left: 0;
+}
+
+.simple-modal .simple-modal-container
+{
+	position: relative;
+	padding: 15px;
+	background-color: #fff;
+	display: inline-block;
+	top: 0%;
+	opacity:0;
+	border-radius: 5px;
+	box-shadow: 3px 3px 15px #3e3e3e;
+	z-index: 99999;
+	text-align: left;
+}
+
+.simple-modal.active .simple-modal-container
+{
+	top: 20%;
+	opacity: 1;
+	transition: all .5s;
+}
+
+.simple-modal .simple-modal-title
+{
+	font-family: sans-serif, Helvetica;
+	font-weight: lighter;
+	color: #3e3e3e;
+	font-size: 14px;
+}
+
+.simple-modal .simple-modal-content
+{
+	font-family: sans-serif, Helvetica;
+	font-weight: lighter;
+	color: #222;
+	font-size: 14px;
+}
+
+.simple-modal .simple-modal-close
+{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: bolder;
+	cursor: pointer;
+	padding: 5px;
+}
