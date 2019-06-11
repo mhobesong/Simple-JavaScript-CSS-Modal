@@ -36,12 +36,28 @@ var SimpleModal = function(element)
 	};
 }
 
-document.querySelector('.simple-modal-close').addEventListener('click', function(){
-	(function(element){
-		var modal = SimpleModal(element.parentNode.parentNode);
-		modal.hide();
-	})(this)
+document.querySelectorAll('.simple-modal-close').forEach(function(trigger){
+	trigger.addEventListener('click', function(){
+		(function(element){
+			var modal = SimpleModal(element.parentNode.parentNode);
+			modal.hide();
+		})(trigger)
+	});
 });
+
+document.querySelectorAll('.simple-modal-trigger').forEach(function(trigger){
+	trigger.addEventListener('click', function(){
+		var target = document.querySelector('#' + trigger.getAttribute('simple-modal-target'));
+		(function(element){
+			var modal = SimpleModal(element);
+			modal.show();
+		})(target)
+	});
+});
+
+
+
+
 
 document.querySelector('.simple-modal-trigger').addEventListener('click', function(){
 	var target = document.querySelector('#' + this.getAttribute('simple-modal-target'));
