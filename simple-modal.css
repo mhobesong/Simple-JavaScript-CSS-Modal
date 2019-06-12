@@ -35,6 +35,7 @@
 	box-shadow: 3px 3px 15px #3e3e3e;
 	z-index: 99999;
 	text-align: left;
+	transition: top,opacity .2s;
 }
 
 .simple-modal.active .simple-modal-container
