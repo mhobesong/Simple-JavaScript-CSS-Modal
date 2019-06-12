@@ -38,10 +38,20 @@ var SimpleModal = function(element)
 
 document.querySelectorAll('.simple-modal-close').forEach(function(trigger){
 	trigger.addEventListener('click', function(){
+
 		(function(element){
+
+			element.parentNode.style.top = "0px";
+			element.parentNode.style.opacity = "0";
+
 			var modal = SimpleModal(element.parentNode.parentNode);
-			modal.hide();
+			setTimeout(function(){
+				modal.hide();
+				element.parentNode.removeAttribute('style');;
+			}, 300);
+
 		})(trigger)
+
 	});
 });
 
